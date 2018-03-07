@@ -1,0 +1,28 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.today{
+text-align: center;
+
+}
+
+.heading
+{
+  display: table;
+  margin: 0 auto;
+}
+
+.heading li{
+
+  list-style: none;
+  float: left;
+  width: 150px;
+  height: 200px;
+  padding: 10px;
+}

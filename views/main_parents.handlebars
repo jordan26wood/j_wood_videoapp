@@ -1,0 +1,16 @@
+<a href="/">
+  <i class="fa-fa-home"></i>
+</a>
+<h1 class="today">{{ message }}</h1>
+
+    <div class="heading">
+<ul>
+  {{#each movieData}}
+    <li>
+      <h4>{{movie_title}}</h4>
+      <p>{{movie_desc}}</p>
+      <p>{{movie_year}}</p>
+    </li>
+  {{/each}}
+</ul>
+</div>
