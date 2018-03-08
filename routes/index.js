@@ -4,14 +4,12 @@ var config = require('../config');
 
 //do some checking here => check the default user profile
 // tenary statment => MDN ternary
-
 var toRender = (config.kidsmode) ? 'main_kids' : 'home';
-
-/* GET home page. */
 router.get('/', function(req, res, next) {
   res.render(toRender, {
   title: 'Roku Movie App',
-  message : "Enjoy Movies From The Past",
+  message : "Welcome Back To Roku,",
+  submessage : "Pick Your Profile",
   mainpage : true,
   kidsmode : config.kidsmode
 });

@@ -1,15 +1,69 @@
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e9f6fd+0,d3eefb+100;Blue+3D+%233 */
+background: -moz-radial-gradient(center, ellipse cover, #e9f6fd 0%, #d3eefb 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover, #e9f6fd 0%,#d3eefb 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, #e9f6fd 0%,#d3eefb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9f6fd', endColorstr='#d3eefb',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 a {
   color: #00B7FF;
 }
 
+h1{
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;;
+  font-size: 50px;
+  text-align: center;
+}
+
+h2{
+  font-family: sans-serif;
+  font-size: 35px;
+  text-align: center;
+}
+
+.profiles{
+margin: 0 auto;
+display: table;
+}
+
+.profile{
+  padding: 40px;
+  display: table;
+  float: left;
+  text-align: center;
+  list-style: none;
+}
+
+#movImages{
+  display: block;
+  width: 250px;
+}
+
+.profile li a{
+  margin-top: 20px;
+font-size: 30px;
+background-color: #f44336;
+   color: white;
+   padding: 14px 25px;
+   text-decoration: none;
+}
+
+
+.pages li{
+  text-align: center;
+  font-size: 30px;
+  list-style: none;
+  float: left;
+  width: 450px;
+  padding: 10px;
+}
+
 .today{
 text-align: center;
-
 }
 
 .heading
@@ -22,7 +76,7 @@ text-align: center;
 
   list-style: none;
   float: left;
-  width: 150px;
-  height: 200px;
+  width: 250px;
+  height: 400px;
   padding: 10px;
 }

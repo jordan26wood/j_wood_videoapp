@@ -1,3 +1,5 @@
+
+
 <a href="/">
   <i class="fa-fa-home"></i>
 </a>
@@ -7,10 +9,24 @@
 <ul>
   {{#each movieData}}
     <li>
+      <img id=movImages src="images/{{movie_thumbnail}}" alt="{{movie_title}}">
       <h4>{{movie_title}}</h4>
       <p>{{movie_desc}}</p>
       <p>{{movie_year}}</p>
     </li>
   {{/each}}
+</ul>
+</div>
+
+<div class="heading">
+<ul>
+{{#each musicData}}
+<li>
+  <img id=musicImages src="images/{{music_thumbnail}}" alt="{{music_title}}">
+  <h4>{{music_title}}</h4>
+  <p>{{music_desc}}</p>
+  <p>{{music_year}}</p>
+</li>
+{{/each}}
 </ul>
 </div>
