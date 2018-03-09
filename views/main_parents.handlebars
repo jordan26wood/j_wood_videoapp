@@ -1,16 +1,23 @@
-
-
 <a href="/">
   <i class="fa-fa-home"></i>
 </a>
-<h1 class="today">{{ message }}</h1>
+<a class="back" href="/">Go Back</a>
 
-    <div class="heading">
+<h1 class="today">{{message}}</h1>
+<h2 class="moviesTitle">{{movie}}</h2>
+
+<div class="moviefilt">
+<div class="filter"><p>Comedy</p></div>
+<div class="filter"><p>Animated</p></div>
+<div class="filter"><p>Family</p></div>
+</div>
+
+<div class="heading">
 <ul>
   {{#each movieData}}
     <li>
-      <img id=movImages src="images/{{movie_thumbnail}}" alt="{{movie_title}}">
       <h4>{{movie_title}}</h4>
+      <img id=movImages src="images/{{movie_thumbnail}}" alt="{{movie_title}}">
       <p>{{movie_desc}}</p>
       <p>{{movie_year}}</p>
     </li>
@@ -18,12 +25,20 @@
 </ul>
 </div>
 
+<h2 class="musicTitle">{{music}}</h2>
+
+<div class="moviefilt">
+<div class="filter"><p>1950's</p></div>
+<div class="filter"><p>1960's</p></div>
+<div class="filter"><p>1970's</p></div>
+</div>
+
 <div class="heading">
 <ul>
 {{#each musicData}}
 <li>
+    <h4>{{music_title}}</h4>
   <img id=musicImages src="images/{{music_thumbnail}}" alt="{{music_title}}">
-  <h4>{{music_title}}</h4>
   <p>{{music_desc}}</p>
   <p>{{music_year}}</p>
 </li>

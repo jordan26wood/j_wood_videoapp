@@ -5,7 +5,6 @@ var config = {
   host: "localhost",
   database: "woodvideoapp",
 
-  kidsmode : false
 }
 
 module.exports = config;
