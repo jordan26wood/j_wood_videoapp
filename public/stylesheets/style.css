@@ -111,6 +111,7 @@ text-align: center;
 .heading{
   display: table;
   margin: 0 auto;
+  padding-bottom: 50px;
 }
 
 .heading li{
@@ -119,4 +120,17 @@ text-align: center;
   width: 200px;
   height: 400px;
   padding: 10px;
+}
+
+.heading a{
+  color: black;
+}
+
+img:hover{
+  cursor: pointer;
+}
+
+audio{
+  width: 200px;
+  margin-top: 10px;
 }

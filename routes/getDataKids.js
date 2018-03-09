@@ -5,8 +5,8 @@ var config = require('../config');
 
 /* GET home page. */
 router.get('/', (req, res) => {
-  connect.query('SELECT * FROM tbl_movies', (err, result) => {
-  connect.query('SELECT * FROM tbl_music', (err, musresult) => {
+  connect.query('SELECT * FROM tbl_kidsmovies', (err, result) => {
+  connect.query('SELECT * FROM tbl_kidsmusic', (err, musresult) => {
     if(err){
       throw err,
       console.log(err);
