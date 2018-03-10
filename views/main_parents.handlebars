@@ -16,14 +16,10 @@
 <ul>
   {{#each movieData}}
     <li>
-      <h4>{{movie_title}} ({{movie_year}})</h4>
+      <h4>{{movie_title}}</h4>
+      <h4>({{movie_year}})</h4>
       <p>Rating: {{movie_rating}}</p>
-      <img id=movImages src="images/{{movie_thumbnail}}" alt="{{movie_title}}">
-      <p>{{movie_desc}}</p>
-      <p>Share On:</p>
-    <a href="{{movie_fb}}">Facebook</a>
-    <a href="{{movie_twitter}}">Twitter</a>
-    <a href="{{movie_insta}}">Instagram</a>
+    <a href="/watch/{{movies_id}}" id="{{movies_id}}">  <img id=movImages src="images/{{movie_thumbnail}}" alt="{{movie_title}}"></a>
     </li>
   {{/each}}
 </ul>
@@ -43,13 +39,8 @@
 <li>
     <h4>{{music_title}} ({{music_year}})</h4>
     <p>Rating: {{music_rating}}</p>
-  <img id=musicImages src="images/{{music_thumbnail}}" alt="{{music_title}}">
-  <audio controls src="music/{{music_play}}" type="music/mp3"></audio>
-  <p>{{music_desc}}</p>
-    <p>Share On:</p>
-  <a href="{{music_fb}}">Facebook</a>
-  <a href="{{music_twitter}}">Twitter</a>
-  <a href="{{music_insta}}">Instagram</a>
+<a href="/watchMus/{{music_id}}" id="{{music_id}}">  <img id=musicImages src="images/{{music_thumbnail}}" alt="{{music_title}}"></a>
+
 </li>
 {{/each}}
 </ul>

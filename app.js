@@ -27,6 +27,10 @@ app.use('/users', require('./routes/users'));
 app.use('/parents', require('./routes/getData'));
 app.use('/kids', require('./routes/getDataKids'));
 app.use('/api', require('./routes/api'));
+app.use('/watch', require('./routes/watchMovie'));
+app.use('/watchMus', require('./routes/watchMusic'));
+app.use('/kidMovie', require('./routes/kidMovie'));
+app.use('/kidMusic', require('./routes/kidMusic'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

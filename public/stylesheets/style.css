@@ -1,29 +1,43 @@
 
 body {
-  padding: 50px;
+  padding: 20px 50px 50px 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e9f6fd+0,d3eefb+100;Blue+3D+%233 */
-background: -moz-radial-gradient(center, ellipse cover, #e9f6fd 0%, #d3eefb 100%); /* FF3.6-15 */
-background: -webkit-radial-gradient(center, ellipse cover, #e9f6fd 0%,#d3eefb 100%); /* Chrome10-25,Safari5.1-6 */
-background: radial-gradient(ellipse at center, #e9f6fd 0%,#d3eefb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9f6fd', endColorstr='#d3eefb',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background-color: #DFDBE5;
+  background-color: #383838;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%23000000' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
-
 a {
   color: #00B7FF;
+  margin-bottom: 10px;
+}
+
+.links p
+{
+  display: block;
+  float: left;
+}
+
+.links a{
+  float: left;
+  padding: 5px;
+  font-size: 20px;
+  color: white;
 }
 
 h1{
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;;
   font-size: 50px;
   text-align: center;
+    color: white;
 }
 
 h2{
   font-family: sans-serif;
   font-size: 35px;
   text-align: center;
+  color: white;
 }
+
 
 .moviefilt{
   text-align: center;
@@ -34,6 +48,10 @@ h2{
   text-align: center;
   padding: 10px;
   font-size: 20px;
+}
+
+.filter p{
+  color: white;
 }
 
 .filter:hover{
@@ -47,6 +65,7 @@ display: table;
 }
 
 .back{
+
   padding: 40px;
   margin-top: 20px;
   font-size: 15px;
@@ -54,7 +73,17 @@ display: table;
    color: white;
    padding: 14px 25px;
    text-decoration: none;
+}
 
+.backButt{
+  float: left;
+  padding: 40px;
+  margin-top: 20px;
+  font-size: 15px;
+  background-color: #f44336;
+   color: white;
+   padding: 14px 25px;
+   text-decoration: none;
 }
 
 .profile{
@@ -98,13 +127,13 @@ text-align: center;
 }
 
 .moviesTitle{
-  color: #4b0202;
+  color: #fff;
 text-align: center;
 }
 
 .musicTitle
 {
-  color: #02344b;
+  color: #fff;
   text-align: center;
 }
 
@@ -114,12 +143,22 @@ text-align: center;
   padding-bottom: 50px;
 }
 
+.heading p{
+  color: white;
+}
+
+.heading h4{
+  color: white;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
 .heading li{
   list-style: none;
   float: left;
   width: 200px;
-  height: 400px;
-  padding: 10px;
+  height: 250px;
+  padding: 5px;
 }
 
 .heading a{
@@ -131,6 +170,55 @@ img:hover{
 }
 
 audio{
-  width: 200px;
+  width: 600px;
   margin-top: 10px;
+  float: left;
+  display: block;
+  clear: both;
+
+}
+
+.name{
+  float: left;
+  margin-top: 10px;
+  margin-bottom: 0;
+  clear: both;
+}
+
+.videoPlayer{
+  margin: 0 auto;
+  display: block;
+  clear: both;
+  width: 800px;
+}
+
+.desc{
+  color: white;
+  font-size: 20px;
+  float: left;
+  clear: both;
+
+}
+
+.buttons
+{
+  display: block;
+  float: left;
+  clear: both;
+  margin-top: 5px;
+  font-size: 20px;
+  background-color: #f44336;
+   color: white;
+   padding: 15px 15px;
+   text-decoration: none;
+   margin-bottom: 10px;
+
+}
+
+#comment{
+  clear: both;
+  float: left;
+  width: 500px;
+  height: 100px;
+  margin-bottom: 20px;
 }

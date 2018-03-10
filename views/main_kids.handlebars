@@ -1,3 +1,4 @@
+<div class="kidbg">
 <a href="/">
   <i class="fa-fa-home"></i>
 </a>
@@ -17,15 +18,11 @@
 <ul>
   {{#each movieData}}
     <li>
-      <h4>{{kids_title}} ({{kids_year}})</h4>
+      <h4>{{kids_title}} </h4>
+      <h4>({{kids_year}})</h4>
       <p>Rating: {{kids_rating}}</p>
-      <img id=movImages src="images/{{kids_thumbnail}}" alt="{{kids_title}}">
-      <p>{{kids_desc}}</p>
-        <p>Share On:</p>
-      <a href="{{kids_facebook}}">Facebook</a>
-      <a href="{{kids_twitter}}">Twitter</a>
-      <a href="{{kids_insta}}">Instagram</a>
-    </li>
+        <a href="/kidMovie/{{kids_id}}" id="{{kids_id}}"><img id=movImages src="images/{{kids_thumbnail}}" alt="{{kids_title}}"></a>
+
   {{/each}}
 </ul>
 </div>
@@ -42,17 +39,14 @@
 <ul>
 {{#each musicData}}
 <li>
-    <h4>{{kidsmusic_title}} ({{kidsmusic_year}})</h4>
+    <h4>{{kidsmusic_title}}</h4>
+    <h4>({{kidsmusic_year}})</h4>
       <p>Rating: {{kidsmusic_rating}}</p>
-  <img id=musicImages src="images/{{kidsmusic_thumbnail}}" alt="{{kidsmusic_title}}">
-    <audio controls src="music/{{kidsmusic_play}}" type="music/mp3"></audio>
-  <p>{{kidsmusic_desc}}</p>
-  <p>Share On:</p>
-  <a href="{{kidsmusic_facebook}}">Facebook</a>
-  <a href="{{kidsmusic_twitter}}">Twitter</a>
-  <a href="{{kidsmusic_insta}}">Instagram</a>
+      <a href="/kidMusic/{{kidsmusic_id}}" id="{{kidsmusic_id}}"><img id=musicImages src="images/{{kidsmusic_thumbnail}}" alt="{{kidsmusic_title}}"></a>
+
 </li>
 
 {{/each}}
 </ul>
+</div>
 </div>

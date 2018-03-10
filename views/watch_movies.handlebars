@@ -1,0 +1,16 @@
+<a class="backButt" href="/parents">Go Back</a>
+  <video class="videoPlayer" controls poster="../images/{{watchData.movie_thumbnail}}" src="../videos/{{watchData.movie_trailer}}" type="videos/mp4"></video>
+  <h1 class="name"> {{watchData.movie_title}}</h1>
+    <p class="desc">{{watchData.movie_desc}}</p>
+
+    <div class="links">
+    <a href="{{watchData.movie_fb}}">Facebook</a>
+    <a href="{{watchData.movie_twitter}}">Twitter</a>
+    <a href="{{watchData.movie_insta}}">Instagram</a>
+  </div>
+
+  <form>
+    <p class="desc">Leave a Comment</p>
+    <textarea id="comment" name="subject" placeholder="Write something.." ></textarea>
+    <input class="buttons" type="submit" value="Submit">
+  </form>

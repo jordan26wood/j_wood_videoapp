@@ -1,0 +1,18 @@
+
+
+  <a class="backButt" href="/kids">Go Back</a>
+    <video class="videoPlayer" controls poster="../images/{{kidmovieData.kids_thumbnail}}" src="../videos/{{kidmovieData.kids_trailer}}" type="videos/mp4"></video>
+    <h1 class="name"> {{kidmovieData.kids_title}}</h1>
+      <p class="desc">{{kidmovieData.kids_desc}}</p>
+
+      <div class="links">
+      <a href="{{kidmovieData.kids_fb}}">Facebook</a>
+      <a href="{{kidmovieData.kids_twitter}}">Twitter</a>
+      <a href="{{kidmovieData.kids_insta}}">Instagram</a>
+    </div>
+
+    <form>
+      <p class="desc">Leave a Comment</p>
+      <textarea id="comment" name="subject" placeholder="Write something.." ></textarea>
+      <input class="buttons" type="submit" value="Submit">
+    </form>
