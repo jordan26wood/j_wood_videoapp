@@ -1,14 +1,21 @@
 var express = require('express');
 var router = express.Router();
-var config = require('../config');
+var videoController = require('../controllers/videoAppController');
 
-router.get('/', function(req, res, next) {
-  res.render('home', {
-  title: 'Roku Movie App',
-  message : "Welcome Back To Roku,",
-  submessage : "Pick Your Profile",
-  mainpage : true,
-});
-});
+router.get('/', videoController.titles);
+
+router.get('/parents', videoController.get_movies);
+
+router.get('/kids', videoController.get_kidsmovies);
+
+router.get('/watch/:id', videoController.one_movie);
+
+router.get('/music/:id', videoController.one_music);
+//
+// router.get('/music/:id/:music', videoController.one_music);
+//
+// router.get('/kidsmovies/:id/:kidsmovies', videoController.one_kidmovies);
+//
+// router.get('/kidsmusic/:id/:kidsmusic', videoController.one_kidmovies);
 
 module.exports = router;

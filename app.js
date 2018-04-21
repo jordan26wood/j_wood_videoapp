@@ -5,6 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var xhb = require('express-handlebars');
+
+var index = require('./routes/index');
+// var users = require('./routes/users');
+
 var app = express();
 
 // view engine setup
@@ -22,15 +26,15 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //import all routes
-app.use('/', require('./routes/index'));
-app.use('/users', require('./routes/users'));
-app.use('/parents', require('./routes/getData'));
-app.use('/kids', require('./routes/getDataKids'));
-app.use('/api', require('./routes/api'));
-app.use('/watch', require('./routes/watchMovie'));
-app.use('/watchMus', require('./routes/watchMusic'));
-app.use('/kidMovie', require('./routes/kidMovie'));
-app.use('/kidMusic', require('./routes/kidMusic'));
+app.use('/', index);
+// app.use('/users', require('./routes/users'));
+// app.use('/parents', require('./routes/getData'));
+// app.use('/kids', require('./routes/getDataKids'));
+// app.use('/api', require('./routes/api'));
+// app.use('/watch', require('./routes/watchMovie'));
+// app.use('/watchMus', require('./routes/watchMusic'));
+// app.use('/kidMovie', require('./routes/kidMovie'));
+// app.use('/kidMusic', require('./routes/kidMusic'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
