@@ -20,6 +20,7 @@ exports.titles = (req, res) => {
         message : "Welcome Back To Roku,",
         submessage : "Pick Your Profile",
         mainpage : true,
+        videopage:false
         });
       });
 
@@ -54,8 +55,10 @@ exports.get_movies = (req, res) => {
         message : "Welcome Back!",
         movie : "Pick A Moive",
         music : "Pick An Album",
-        movieData : result,
-        musicData : musresult,
+        mainpage : true,
+        videopage : false,
+        movieData : JSON.stringify(result),
+        musicData : JSON.stringify(musresult)
       });
     })
   })
@@ -88,8 +91,10 @@ exports.get_kidsmovies = (req, res) => {
         message : "Welcome Back!",
         movie : "Pick A Moive",
         music : "Pick An Album",
-        movieData : result,
-        musicData : musresult,
+        mainpage : true,
+        videopage : false,
+        movieData : JSON.stringify(result),
+        musicData : JSON.stringify(musresult)
       });
         });
     })
@@ -127,44 +132,63 @@ exports.one_movie = (req, res) => {
 };
 
 exports.one_kidsmovies = (req, res) => {
-  console.log('Hit One KIDS movies');
-
+  console.log("hit all movies");
   connect.getConnection((err, connection) => {
-    if (err) {
+    if(err){
       return console.log(err.message);
     }
-
-      let query = `SELECT * FROM tbl_kidsmovies WHERE kids_id=${req.params.id}`;
-
-    connect.query(query, (err, result) => {
-      if (err) {
-        return console.log(err.message);
-      }
-
-      res.json({movieData: result});
-    })
-  })
+    let movquery = `SELECT * FROM tbl_kidsmovies WHERE kids_id=${req.params.id}`;
+    let query = `SELECT * FROM tbl_comments WHERE comments_movie = "${req.params.id}"`;
+  console.log(req.params.id, req.params.movie);
+  connect.query(query, (error, commentrows) => {
+    connect.query(movquery, (error, rows) => {
+    connection.release();
+    if (error){
+      console.log(error);
+    }
+    console.log(rows);
+    res.render('watch_kidmovies', {
+      movie : req.params.id,
+      movieData : rows[0],
+      data : JSON.stringify(commentrows),
+      mainpage : false,
+      videopage : true
+    });
+      });
+  });
+});
 };
 
 
-exports.one_kidsmusic = (req, res) => {
-  console.log('hit KIDS one music');
 
+
+
+exports.one_kidsmusic = (req, res) => {
+  console.log("hit all movies");
   connect.getConnection((err, connection) => {
-    if (err) {
+    if(err){
       return console.log(err.message);
     }
-
-      let query = `SELECT * FROM tbl_kidsmusic WHERE kidsmusic_id=${req.params.id}`;
-
-    connect.query(query, (err, result) => {
-      if (err) {
-        return console.log(err.message);
-      }
-
-      res.json({movieData: result});
-    })
-  })
+    let movquery = `SELECT * FROM tbl_kidsmusic WHERE kidsmusic_id=${req.params.id}`;
+    let query = `SELECT * FROM tbl_comments WHERE comments_movie = "${req.params.id}"`;
+  console.log(req.params.id, req.params.movie);
+  connect.query(query, (error, commentrows) => {
+    connect.query(movquery, (error, rows) => {
+    connection.release();
+    if (error){
+      console.log(error);
+    }
+    console.log(rows);
+    res.render('watch_kidmovies', {
+      movie : req.params.id,
+      kidmusicData : rows[0],
+      data : JSON.stringify(commentrows),
+      mainpage : false,
+      videopage : true
+    });
+      });
+  });
+});
 };
 
 exports.one_movie = (req, res) => {

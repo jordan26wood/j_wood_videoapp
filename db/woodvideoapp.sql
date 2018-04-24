@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 09, 2018 at 06:02 AM
+-- Generation Time: Apr 21, 2018 at 03:12 AM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -21,6 +21,22 @@ SET time_zone = "+00:00";
 --
 -- Database: `woodvideoapp`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_comments`
+--
+
+DROP TABLE IF EXISTS `tbl_comments`;
+CREATE TABLE IF NOT EXISTS `tbl_comments` (
+  `comments_id` mediumint(8) UNSIGNED NOT NULL,
+  `comments_auth` varchar(125) DEFAULT NULL,
+  `comments_copy` text NOT NULL,
+  `comments_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `comments_movie` int(11) NOT NULL,
+  `comments_rating` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -149,6 +165,21 @@ INSERT INTO `tbl_music` (`music_id`, `music_title`, `music_year`, `music_desc`, 
 (3, 'David Bowie', '1960\'s', 'David Robert Jones, known professionally as David Bowie was an English singer-songwriter and actor. He was a leading figure in popular music for over five decades, acclaimed by critics and other musicians for his innovative work. ', 'davidbowie.mp3', '6.5/10', 'https://twitter.com/?lang=en', 'https://www.facebook.com/', 'https://www.instagram.com/?hl=en', 'parentsMusic4.jpg'),
 (4, 'Led Zeppelin', '1970\'s', 'Led Zeppelin were an English rock band formed in London in 1968. The group consisted of guitarist Jimmy Page, singer Robert Plant, bassist and keyboardist John Paul Jones, and drummer John Bonham. ', 'ledzepp.mp3', '9/10', 'https://twitter.com/?lang=en', 'https://www.instagram.com/?hl=en', 'https://www.instagram.com/?hl=en', 'parentsMusic5.jpg'),
 (5, 'Pink Floyd', '1960\'s', 'Pink Floyd were an English rock band formed in London in 1965. They achieved international acclaim with their progressive and psychedelic music.', 'pinkfloyd.mp3', '9/10', 'https://twitter.com/?lang=en', 'https://www.facebook.com/', 'https://www.instagram.com/?hl=en', 'parentsMusic2.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_social`
+--
+
+DROP TABLE IF EXISTS `tbl_social`;
+CREATE TABLE IF NOT EXISTS `tbl_social` (
+  `id_social` int(11) NOT NULL AUTO_INCREMENT,
+  `twitter_social` varchar(100) NOT NULL,
+  `facebook_social` varchar(100) NOT NULL,
+  `instagram_social` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_social`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

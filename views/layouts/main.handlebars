@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <link rel="stylesheet" href="/stylesheets/style.css">
   {{#if kidsmode}}
     <link rel="stylesheet" href="/stylesheets/kids.css">
@@ -15,7 +16,20 @@
   {{{body}}}
 
 
-
-<script src="javascripts/main.js"></script>
+<script>
+var appData ={
+  movies : {{{ movieData }}},
+  music : {{{ musicData }}}
+}
+// var comData ={
+//   comments: {{{ data }}}
+// }
+</script>
+{{#if mainpage}}
+<script src="/javascripts/main.js"></script>
+{{/if}}
+{{#if videopage}}
+<script src="/javascripts/video.js"></script>
+{{/if}}
 </body>
 </html>

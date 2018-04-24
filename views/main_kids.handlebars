@@ -1,3 +1,4 @@
+<div id="app">
 <div class="kidbg">
 <a href="/">
   <i class="fa-fa-home"></i>
@@ -16,14 +17,23 @@
 
 <div class="heading">
 <ul>
-  {{#each movieData}}
+  <div >
+    <li v-for="movie in movies">
+      <h4>${movie.kids_title}</h4>
+      <h4>(${movie.kids_year})</h4>
+      <p>Rating: ${movie.kids_rating}</p>
+    <a :href="'/kidsmoviedata/' + movie.kids_id" :id="movie.kids_id">  <img id=movImages :src="'images/' + movie.kids_thumbnail" :alt="movie.kids_title"></a>
+    </li>
+  </div>
+
+  <!-- {{#each movieData}}
     <li>
       <h4>{{kids_title}} </h4>
       <h4>({{kids_year}})</h4>
       <p>Rating: {{kids_rating}}</p>
-        <a href="/watch/{{kids_id}}" id="{{kids_id}}"><img id=movImages src="images/{{kids_thumbnail}}" alt="{{kids_title}}"></a>
+        <a href="/kidmovieData/{{kids_id}}" id="{{kids_id}}"><img id=movImages src="images/{{kids_thumbnail}}" alt="{{kids_title}}"></a>
 
-  {{/each}}
+  {{/each}} -->
 </ul>
 </div>
 
@@ -42,11 +52,12 @@
     <h4>{{kidsmusic_title}}</h4>
     <h4>({{kidsmusic_year}})</h4>
       <p>Rating: {{kidsmusic_rating}}</p>
-      <a href="/kidMusic/{{kidsmusic_id}}" id="{{kidsmusic_id}}"><img id=musicImages src="images/{{kidsmusic_thumbnail}}" alt="{{kidsmusic_title}}"></a>
+      <a href="/kidmusicData/{{kidsmusic_id}}" id="{{kidsmusic_id}}"><img id=musicImages src="images/{{kidsmusic_thumbnail}}" alt="{{kidsmusic_title}}"></a>
 
 </li>
 
 {{/each}}
 </ul>
+</div>
 </div>
 </div>

@@ -11,11 +11,9 @@ router.get('/kids', videoController.get_kidsmovies);
 router.get('/watch/:id', videoController.one_movie);
 
 router.get('/music/:id', videoController.one_music);
-//
-// router.get('/music/:id/:music', videoController.one_music);
-//
-// router.get('/kidsmovies/:id/:kidsmovies', videoController.one_kidmovies);
-//
-// router.get('/kidsmusic/:id/:kidsmusic', videoController.one_kidmovies);
+
+router.get('/kidsmoviedata/:id', videoController.one_kidsmovies);
+
+router.get('/kidsmusicdata/:id', videoController.one_kidsmovies);
 
 module.exports = router;

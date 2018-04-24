@@ -1,3 +1,4 @@
+<div id="app">
 <a href="/">
   <i class="fa-fa-home"></i>
 </a>
@@ -14,14 +15,14 @@
 
 <div class="heading">
 <ul>
-  {{#each movieData}}
-    <li>
-      <h4>{{movie_title}}</h4>
-      <h4>({{movie_year}})</h4>
-      <p>Rating: {{movie_rating}}</p>
-    <a href="/watch/{{movies_id}}" id="{{movies_id}}">  <img id=movImages src="images/{{movie_thumbnail}}" alt="{{movie_title}}"></a>
+  <div >
+    <li v-for="movie in movies">
+      <h4>${movie.movie_title}</h4>
+      <h4>(${movie.movie_year})</h4>
+      <p>Rating: ${movie.movie_rating}</p>
+    <a :href="'/watch/' + movie.movies_id" :id="movie.movies_id">  <img id=movImages :src="'images/' + movie.movie_thumbnail" :alt="movie.movie_title"></a>
     </li>
-  {{/each}}
+  </div>
 </ul>
 </div>
 
@@ -35,13 +36,13 @@
 
 <div class="heading">
 <ul>
-{{#each musicData}}
-<li>
-    <h4>{{music_title}} ({{music_year}})</h4>
-    <p>Rating: {{music_rating}}</p>
-<a href="/music/{{music_id}}" id="{{music_id}}">  <img id=musicImages src="images/{{music_thumbnail}}" alt="{{music_title}}"></a>
+<li v-for="song in music">
+  <h4>${song.music_title}</h4>
+  <h4>(${song.music_year})</h4>
+  <p>Rating: ${song.music_rating}</p>
+<a href="'/music/' + music.music_id" :id="song.music_id">  <img id=musicImages :src="'images/' + song.music_thumbnail" :alt="song.music_title"></a>
 
 </li>
-{{/each}}
 </ul>
+</div>
 </div>
